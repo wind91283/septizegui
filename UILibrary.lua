@@ -160,7 +160,7 @@ local library = {
 		logo = "rbxassetid://4350178803", -- "http://www.roblox.com/asset/?id=6597976562",
         footer = " Exodus Winning $$$",
         modal = true,
-        font = Enum.Font.SourceSans,
+        font = Enum.Font.Source Code Pro,
         textsize = 16,
         textstroke = true
     },
