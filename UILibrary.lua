@@ -155,8 +155,8 @@ local library = {
 	windows = {},
     pointers = {},
     settings = {
-        guiname = "Hexagon",
-		title = "septiize.wtf",
+        guiname = "septiize",
+		title = "Hexagon",
 		logo = "rbxassetid://4350178803", -- "http://www.roblox.com/asset/?id=6597976562",
         footer = "septiizeless",
         modal = true,
