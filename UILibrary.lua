@@ -155,7 +155,7 @@ local library = {
 	windows = {},
     pointers = {},
     settings = {
-        guiname = "septiize.wtf",
+        guiname = "Hexagon",
 		title = "Hexagon [Exodus Edition]",
 		logo = "rbxassetid://4350178803", -- "http://www.roblox.com/asset/?id=6597976562",
         footer = " Exodus Winning $$$",
