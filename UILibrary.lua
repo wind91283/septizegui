@@ -1,4 +1,4 @@
--- septiize.wtf UI Library
+-- Hexagon UI Library
 local TweenService, RunService, UserInputService,gui,dragging,dragInput,dragStart,startPos,cpt,cpf,cppicking,cppickingVal,cppickingAlpha,cphue,cpsat,cpval,focused,highest,focusedBox = game:GetService("TweenService"),game:GetService("RunService"), game:GetService("UserInputService")
 local cpalpha = 0
 
@@ -155,8 +155,8 @@ local library = {
 	windows = {},
     pointers = {},
     settings = {
-        guiname = "Hexagon",
-		title = "Hexagon [Exodus Edition]",
+        guiname = "septiize",
+		title = "septiize.wtf",
 		logo = "rbxassetid://4350178803", -- "http://www.roblox.com/asset/?id=6597976562",
         footer = " Exodus Winning $$$",
         modal = true,
@@ -166,7 +166,7 @@ local library = {
     },
     theme = {
         buttons = Color3.fromRGB(20, 200, 20), -- toggle, sliders colors
-        text = Color3.fromRGB(235, 235, 235),
+        text = Color3.fromRGB(90, 13, 233),
         textboxtext = Color3.fromRGB(145, 145, 145),
         main = Color3.fromRGB(30, 30, 30),
         outline = Color3.fromRGB(60, 60, 60),
@@ -204,7 +204,7 @@ function library:Notify(title, message, time, buttons, _function)
 		ZIndex = 100,
 		Size = UDim2.new(0,220,0,80),
 		Position = UDim2.new(0,-300,1,-90),
-		BackgroundColor3 = Color3.fromRGB(30,30,30),
+		BackgroundColor3 = Color3.fromRGB(6, 1, 16),
 		Text = "",
 		Name = "Notification",
 		Parent = library.base
@@ -216,7 +216,7 @@ function library:Notify(title, message, time, buttons, _function)
 		Size = UDim2.new(1,0,0,18),
 		Text = notification.settings.title,
 		TextSize = 18,
-		TextColor3 = Color3.new(1,1,1),
+		TextColor3 = Color3.new(90, 13, 233),
 		Font = "Code",
 		TextXAlignment = "Left",
 		Name = "Title",
@@ -230,7 +230,7 @@ function library:Notify(title, message, time, buttons, _function)
 		Position = UDim2.new(0,0,0.25,0),
 		Text = notification.settings.message,
 		TextSize = 14,
-		TextColor3 = Color3.new(1,1,1),
+		TextColor3 = Color3.new(90, 13, 233),
 		Font = "Code",
 		TextXAlignment = "Left",
 		Name = "Message",
@@ -242,10 +242,10 @@ function library:Notify(title, message, time, buttons, _function)
 			ZIndex = 100,
 			Size = UDim2.new(1/#buttons, 0, 0, 16),
 			Position = UDim2.new((i-1)/#buttons, 0,0.8,0),
-			BackgroundColor3 = Color3.fromRGB(60,60,60),
+			BackgroundColor3 = Color3.fromRGB(6, 1, 16),
 			Text = v,
 			TextSize = 14,
-			TextColor3 = Color3.fromRGB(235, 235, 235),
+			TextColor3 = Color3.fromRGB(90, 13, 233),
 			Font = "Code",
 			TextStrokeColor3 = Color3.new(0,0,0),
 			TextStrokeTransparency = 0,
@@ -700,7 +700,7 @@ function library:CreateWindow(csize, cpos)
 			
 			LocalTab.content = library:create("Frame", {
 				Size = UDim2.new(1,0,1,0),
-				BackgroundColor3 = Color3.fromRGB(40, 40, 40),
+				BackgroundColor3 = Color3.fromRGB(6, 1, 16),
 				BackgroundTransparency = 0,
 				Parent = LocalTab.main
 			})
@@ -728,7 +728,7 @@ function library:CreateWindow(csize, cpos)
 					Size = UDim2.new(1,0,0,library.settings.textsize + 2),
 					BackgroundTransparency = 1,
 					Text = "",
-					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextColor3 = Color3.fromRGB(90, 13, 233),
 					Font = library.settings.font,
 					TextSize = library.settings.textsize,
 					TextStrokeTransparency = library.settings.textstroke and 0 or 1,
@@ -761,7 +761,7 @@ function library:CreateWindow(csize, cpos)
 				button.button = library:create("TextButton", {
 					LayoutOrder = self.order,
 					Size = UDim2.new(1,0,0,library.settings.textsize + 2),
-					BackgroundColor3 = Color3.fromRGB(60, 60, 60),
+					BackgroundColor3 = Color3.fromRGB(6, 1, 16),
 					BackgroundTransparency = 0,
 					Text = tostring(text),
 					TextColor3 = library.theme.text,
@@ -1744,7 +1744,7 @@ function library:CreateWindow(csize, cpos)
 					ZIndex = 165,
 					Position = UDim2.new(0,181,0,5),
 					Size = UDim2.new(0,14,0,170),
-					BackgroundColor3 = Color3.fromRGB(200,200,200),
+					BackgroundColor3 = Color3.fromRGB(6, 1, 16),
 					BorderColor3 = library.theme.outline,
 					Text = "",
 					Parent = color.colorpicker
@@ -1962,8 +1962,8 @@ end)
 --]]
 local function GetConfigs()
 	cfgs = {}
-	for i,v in pairs(syn_io_listdir("sephub")) do
-		if v:sub(-10) == ".sephubcfg" then
+	for i,v in pairs(syn_io_listdir("hexhub")) do
+		if v:sub(-10) == ".hexhubcfg" then
 			table.insert(cfgs, string.split(v, ".")[1]:sub(8))
 		end
 	end
